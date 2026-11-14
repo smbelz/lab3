@@ -1,4 +1,12 @@
-"""Предметная модель - библиотечная книга."""
+"""Предметная модель: библиотечная книга.
+Требования:
+* использование @dataclass для сущности;
+* поля сущности: item_id, title, category, year, author, copies
+  (author, copies — поля варианта);
+* инварианты проверяются при создании, неверный объект не создаётся;
+* to_dict / from_dict для сериализации в JSON;
+* frozen=True: объект неизменяем после создания.
+"""
 
 from collections.abc import Mapping
 from dataclasses import dataclass

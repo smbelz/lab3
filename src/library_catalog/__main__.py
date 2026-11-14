@@ -1,4 +1,4 @@
-"""Точка входа."""
+"""Точка входа: python -m src.library_catalog."""
 
 import sys
 
