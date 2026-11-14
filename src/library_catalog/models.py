@@ -55,7 +55,7 @@ class Book:
         }
 
     @classmethod
-    def from_dict(cls, data: Mapping[str, object]) -> Book:
+    def from_dict(cls, data: Mapping[str, object]):
         if not isinstance(data, Mapping):
             raise IncorrectEssenceError("данные о книге должны быть словарём")
         required_fields = ["item_id", "title", "category", "year", "author", "copies"]

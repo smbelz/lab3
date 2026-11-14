@@ -1,10 +1,17 @@
 """Тесты каталога библоитечных книг."""
 
 import json
-import pytest
 from pathlib import Path
+
+import pytest
+
 from src.library_catalog.catalog import LibraryCatalog
-from src.library_catalog.errors import (DamagedFileError, DuplicateIDError, ObjectNotFoundError, UnsupportedFormatError)
+from src.library_catalog.errors import (
+    DamagedFileError,
+    DuplicateIDError,
+    ObjectNotFoundError,
+    UnsupportedFormatError,
+)
 from src.library_catalog.models import Book
 
 

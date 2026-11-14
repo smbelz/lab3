@@ -1,6 +1,7 @@
 """Точка входа."""
 
 import sys
+
 import pytest
 
 

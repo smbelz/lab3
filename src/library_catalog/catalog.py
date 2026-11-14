@@ -3,7 +3,14 @@
 import json
 from collections.abc import Iterator
 from pathlib import Path
-from src.library_catalog.errors import DamagedFileError, DuplicateIDError, ObjectNotFoundError, UnsupportedFormatError
+
+from library_catalog.errors import IncorrectEssenceError
+from src.library_catalog.errors import (
+    DamagedFileError,
+    DuplicateIDError,
+    ObjectNotFoundError,
+    UnsupportedFormatError,
+)
 from src.library_catalog.models import Book
 
 
@@ -104,6 +111,6 @@ class LibraryCatalog:
                 new_catalog._items[book.item_id] = book
         except DamagedFileError:
             raise
-        except Exception:
+        except IncorrectEssenceError:
             raise DamagedFileError
         return new_catalog
