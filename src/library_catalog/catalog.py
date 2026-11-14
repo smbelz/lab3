@@ -12,7 +12,7 @@ import json
 from collections.abc import Iterator
 from pathlib import Path
 
-from library_catalog.errors import IncorrectEssenceError
+from src.library_catalog.errors import IncorrectEssenceError
 from src.library_catalog.errors import (
     DamagedFileError,
     DuplicateIDError,
