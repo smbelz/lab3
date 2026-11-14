@@ -5,6 +5,7 @@ from dataclasses import dataclass
 
 from src.library_catalog.errors import IncorrectEssenceError
 
+
 @dataclass(frozen=True)
 class Book:
     item_id: int
