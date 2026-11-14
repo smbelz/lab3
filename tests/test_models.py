@@ -1,3 +1,11 @@
+"""Тесты предметной модели: библиотечная книга.
+Требования:
+* использование @dataclass для сущности;
+* поля сущности: item_id, title, category, year, author, copies
+* инварианты проверяются при создании, неверный объект не создаётся;
+* to_dict / from_dict для сериализации в JSON;
+* frozen=True: объект неизменяем после создания.
+"""
 from dataclasses import FrozenInstanceError
 
 import pytest
