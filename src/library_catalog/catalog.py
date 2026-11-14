@@ -46,7 +46,7 @@ class LibraryCatalog:
         query = query.strip().lower()
         if not query:
             return []
-        return [b for b in self._sorted_items() if query in b.title.lower()]
+        return [b for b in self._sorted_items() if query == b.title.lower()]
 
     def __len__(self) -> int:
         return len(self._items)
@@ -74,7 +74,7 @@ class LibraryCatalog:
             f.write(text)
 
     @classmethod
-    def load(cls, path: str | Path) -> LibraryCatalog:
+    def load(cls, path: str | Path):
         """Загрузка каталога из JSON."""
         path = Path(path)
         try:
